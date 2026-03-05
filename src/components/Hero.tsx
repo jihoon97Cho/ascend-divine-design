@@ -31,7 +31,7 @@ const Hero = () => {
                   <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />
                 ))}
               </div>
-              <span>Trusted by 200+ Businesses</span>
+              <span>Trusted by 100+ Businesses</span>
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.1] mb-6">
@@ -57,12 +57,8 @@ const Hero = () => {
             {/* Trust indicators */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground justify-center lg:justify-start">
               <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-gold" />
-                <span>200+ Clients Helped</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-gold" />
-                <span>$4.2M+ Revenue Generated</span>
+                <span>$8.5M+ Lead Value Generated</span>
               </div>
             </div>
           </motion.div>
@@ -107,23 +103,6 @@ const Hero = () => {
               </div>
 
               {/* Floating stat cards */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
-                className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-gold" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground">Cost Per Lead</p>
-                    <p className="font-display font-bold text-foreground">$12.40</p>
-                  </div>
-                </div>
-              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
