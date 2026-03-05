@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -22,9 +23,11 @@ const Footer = () => {
               Book a free strategy call today. We'll show you exactly how we can
               help you grow — no pressure, no obligations.
             </p>
-            <Button variant="hero" size="lg" className="text-lg px-10 py-7 rounded-xl">
-              Book A Free Strategy Call
-              <ArrowRight className="w-5 h-5 ml-1" />
+            <Button variant="hero" size="lg" className="text-lg px-10 py-7 rounded-xl" asChild>
+              <Link to="/book">
+                Book A Free Strategy Call
+                <ArrowRight className="w-5 h-5 ml-1" />
+              </Link>
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
               Free consultation · No commitment · Results guaranteed

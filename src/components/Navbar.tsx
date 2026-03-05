@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => (
@@ -14,9 +15,11 @@ const Navbar = () => (
         <a href="#why-us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why Us</a>
         <a href="#results" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Results</a>
       </div>
-      <Button variant="hero" size="default" className="text-sm">
-        Book A Free Call
-        <ArrowRight className="w-4 h-4 ml-1" />
+      <Button variant="hero" size="default" className="text-sm" asChild>
+        <Link to="/book">
+          Book A Free Call
+          <ArrowRight className="w-4 h-4 ml-1" />
+        </Link>
       </Button>
     </div>
   </nav>
