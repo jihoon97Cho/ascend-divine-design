@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Users, TrendingUp, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -48,9 +49,11 @@ const Hero = () => {
 
             {/* Single CTA */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg px-10 py-7 rounded-xl">
-                Book A Free Strategy Call
-                <ArrowRight className="w-5 h-5 ml-1" />
+              <Button variant="hero" size="lg" className="text-lg px-10 py-7 rounded-xl" asChild>
+                <Link to="/book">
+                  Book A Free Strategy Call
+                  <ArrowRight className="w-5 h-5 ml-1" />
+                </Link>
               </Button>
             </div>
 
