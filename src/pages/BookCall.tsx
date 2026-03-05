@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,35 @@ import {
 } from "@/components/ui/select";
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
+
+const GHLCalendar = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load the GHL embed script
+    const script = document.createElement("script");
+    script.src = "https://api.leadconnectorhq.com/js/form_embed.js";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div ref={containerRef}>
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/booking/wtu17F85axGcNlcTUeA2"
+        style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
+        scrolling="no"
+        id="wtu17F85axGcNlcTUeA2_booking"
+        title="Book a Strategy Call"
+      />
+    </div>
+  );
+};
 
 const BookCall = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -271,17 +300,7 @@ const BookCall = () => {
             </div>
 
             <div className="rounded-2xl border border-border bg-card overflow-hidden">
-              {/* 
-                Replace the src below with your GoHighLevel calendar embed URL.
-                Example: https://api.leadconnectorhq.com/widget/booking/YOUR_CALENDAR_ID
-              */}
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/booking/YOUR_CALENDAR_ID"
-                title="Book a Strategy Call"
-                className="w-full border-0"
-                style={{ minHeight: "700px" }}
-                loading="lazy"
-              />
+              <GHLCalendar />
             </div>
           </motion.div>
         </section>
