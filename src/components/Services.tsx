@@ -1,43 +1,19 @@
 import { motion } from "framer-motion";
-import { Megaphone, Target, TrendingUp, Globe, Palette, BarChart3 } from "lucide-react";
+import { Megaphone, BarChart3, Globe, PenTool, Target, TrendingUp } from "lucide-react";
 
 const services = [
-  {
-    icon: Megaphone,
-    title: "Social Media Marketing",
-    description: "Build brand awareness and attract engaged followers that convert into paying customers.",
-  },
-  {
-    icon: Target,
-    title: "Paid Advertising",
-    description: "High-ROI campaigns on Meta, Google, and TikTok that deliver qualified leads consistently.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Growth Strategy",
-    description: "Data-driven roadmaps and funnel optimization to scale revenue predictably.",
-  },
-  {
-    icon: Globe,
-    title: "Web Design & Development",
-    description: "Conversion-focused websites that turn visitors into customers seamlessly.",
-  },
-  {
-    icon: Palette,
-    title: "Content Creation",
-    description: "Scroll-stopping visuals and copy that resonate with your ideal audience.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & Reporting",
-    description: "Crystal-clear dashboards so you always know your ROI and growth metrics.",
-  },
+  { icon: Megaphone, title: "Paid Advertising", description: "High-converting ad campaigns across Meta, Google & TikTok that drive real revenue." },
+  { icon: PenTool, title: "Content Strategy", description: "Scroll-stopping content that builds authority and turns followers into customers." },
+  { icon: Target, title: "Lead Generation", description: "Automated funnels and systems that deliver qualified leads on autopilot." },
+  { icon: BarChart3, title: "Analytics & CRO", description: "Data-driven optimization to maximize every dollar of your marketing spend." },
+  { icon: Globe, title: "Web & Funnel Design", description: "High-converting websites and funnels designed to capture and convert." },
+  { icon: TrendingUp, title: "Growth Systems", description: "End-to-end growth infrastructure that scales predictably with your business." },
 ];
 
 const Services = () => {
   return (
     <section id="services" className="py-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +21,10 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-            Our <span className="text-gradient-gold">Services</span>
+            What We Do & <span className="text-gradient-gold">Why It Works</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Everything your business needs to dominate online.
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            Full-stack growth services designed to scale your business predictably.
           </p>
         </motion.div>
 
@@ -56,20 +32,17 @@ const Services = () => {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group relative bg-card rounded-2xl p-8 border border-border hover:border-gold/30 transition-all duration-500 overflow-hidden"
+              className="p-6 rounded-xl border border-border bg-card hover:border-gold/20 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:glow-gold transition-all duration-500">
-                  <service.icon className="w-6 h-6 text-gold" />
-                </div>
-                <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+              <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+                <service.icon className="w-5 h-5 text-gold" />
               </div>
+              <h3 className="font-display font-semibold text-lg mb-2">{service.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

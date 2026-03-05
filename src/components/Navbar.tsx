@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { Phone, ArrowRight, Zap, MessageSquare, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -13,10 +11,9 @@ const Navbar = () => (
       <div className="hidden md:flex items-center gap-8">
         <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
         <a href="#why-us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why Us</a>
-        <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
-        <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+        <a href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Results</a>
       </div>
-      <Button variant="hero" size="lg" className="hidden md:flex">
+      <Button variant="hero" size="default" className="hidden md:flex">
         Book a Free Call
       </Button>
     </div>
