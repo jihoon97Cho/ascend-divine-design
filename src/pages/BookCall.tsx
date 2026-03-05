@@ -281,29 +281,30 @@ const BookCall = () => {
           </motion.div>
         </section>
 
-        {/* SECTION 2: Calendar */}
-        <section ref={calendarRef} className="container mx-auto px-6 max-w-4xl mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: formSubmitted ? 1 : 0.3, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={!formSubmitted ? "pointer-events-none" : ""}
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-display font-bold mb-3">
-                Schedule Your{" "}
-                <span className="text-gradient-gold">Strategy Call</span>
-              </h2>
-              <p className="text-muted-foreground">
-                Choose a time that works best for you.
-              </p>
-            </div>
+        {/* SECTION 2: Calendar - only shown after form submission */}
+        {formSubmitted && (
+          <section ref={calendarRef} className="container mx-auto px-6 max-w-4xl mt-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-display font-bold mb-3">
+                  Schedule Your{" "}
+                  <span className="text-gradient-gold">Strategy Call</span>
+                </h2>
+                <p className="text-muted-foreground">
+                  Choose a time that works best for you.
+                </p>
+              </div>
 
-            <div className="rounded-2xl border border-border bg-card overflow-hidden">
-              <GHLCalendar />
-            </div>
-          </motion.div>
-        </section>
+              <div className="rounded-2xl border border-border bg-card overflow-hidden">
+                <GHLCalendar />
+              </div>
+            </motion.div>
+          </section>
+        )}
       </div>
     </div>
   );
