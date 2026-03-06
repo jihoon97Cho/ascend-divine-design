@@ -29,7 +29,7 @@ const BookCall = () => {
       </nav>
 
       <div className="pt-24 pb-16">
-        <section className="container mx-auto px-6 max-w-3xl">
+        <section className="container mx-auto px-6 max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,15 +45,13 @@ const BookCall = () => {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card overflow-hidden">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/survey/osLiQSua3d7h5WtthTt4"
-                style={{ border: "none", width: "100%", minHeight: "600px" }}
-                scrolling="no"
-                id="osLiQSua3d7h5WtthTt4"
-                title="Survey"
-              />
-            </div>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/survey/osLiQSua3d7h5WtthTt4"
+              style={{ border: "none", width: "100%", minHeight: "500px" }}
+              scrolling="no"
+              id="osLiQSua3d7h5WtthTt4"
+              title="Survey"
+            />
           </motion.div>
         </section>
       </div>
