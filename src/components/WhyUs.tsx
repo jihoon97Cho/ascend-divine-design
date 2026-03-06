@@ -50,7 +50,7 @@ const WhyUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex gap-4 p-6 rounded-xl border border-border bg-background transition-all duration-300 hover:-translate-y-1 hover:border-gold/20 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
+              className="flex gap-4 p-6 rounded-xl border border-border bg-background transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-gold/20 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
             >
               <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
                 <item.icon className="w-6 h-6 text-gold" />
