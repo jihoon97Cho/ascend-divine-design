@@ -52,7 +52,7 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="hover-lift p-6 rounded-xl border border-border bg-card flex flex-col hover:border-gold/20 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
+              className="card-hover p-6 rounded-xl border border-border bg-card flex flex-col hover:border-gold/20 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
             >
               {/* Result badge */}
               <div className="inline-flex self-start items-center px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-semibold mb-4">
