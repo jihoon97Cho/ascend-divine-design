@@ -116,11 +116,11 @@
     pointer-events: none;
   }
 
-  .hover-lift {
+  .card-hover {
     @apply transition-all duration-300 ease-out;
   }
 
-  .hover-lift:hover {
+  .card-hover:hover {
     @apply scale-[1.03] -translate-y-2;
   }
 }
