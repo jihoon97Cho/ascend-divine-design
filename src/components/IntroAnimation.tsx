@@ -19,8 +19,8 @@ const IntroAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
     const timer = setTimeout(() => {
       setVisible(false);
-      setTimeout(onComplete, 350);
-    }, 750);
+      setTimeout(onComplete, 450);
+    }, 1750);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -44,7 +44,7 @@ const IntroAnimation = ({ onComplete }: { onComplete: () => void }) => {
             }}
             initial={{ clipPath: "inset(0 0 0 0)" }}
             animate={{ clipPath: "inset(100% 0 0 0)" }}
-            transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1], delay: 0.15 }}
+            transition={{ duration: 1.9, ease: [0.65, 0, 0.35, 1], delay: 0.15 }}
           />
 
           {/* Blur overlay for premium feel */}
@@ -52,7 +52,7 @@ const IntroAnimation = ({ onComplete }: { onComplete: () => void }) => {
             className="absolute inset-0 backdrop-blur-md"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
           />
 
           {/* Chevron logo sliding upward */}
@@ -63,8 +63,8 @@ const IntroAnimation = ({ onComplete }: { onComplete: () => void }) => {
             initial={{ y: 0, opacity: 1 }}
             animate={{ y: "-85vh", opacity: 0 }}
             transition={{
-              y: { duration: 0.9, ease: [0.65, 0, 0.35, 1], delay: 0.1 },
-              opacity: { duration: 0.3, ease: "easeOut", delay: 0.7 },
+              y: { duration: 1.9, ease: [0.65, 0, 0.35, 1], delay: 0.1 },
+              opacity: { duration: 0.4, ease: "easeOut", delay: 1.5 },
             }}
             style={{ marginBottom: "15vh" }}
           />
