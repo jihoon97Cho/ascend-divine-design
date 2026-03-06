@@ -50,7 +50,8 @@ const WhyUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-hover flex gap-4 p-6 rounded-xl border border-border bg-background hover:border-gold/20 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
+              whileHover={{ scale: 1.04, y: -10, boxShadow: "0 16px 40px -8px hsl(222 30% 5% / 0.7)" }}
+              className="cursor-pointer flex gap-4 p-6 rounded-xl border border-border bg-background transition-colors duration-200 hover:border-gold/20"
             >
               <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
                 <item.icon className="w-6 h-6 text-gold" />
