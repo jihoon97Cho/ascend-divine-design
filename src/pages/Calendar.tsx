@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const BookCall = () => {
+const Calendar = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.src = "https://api.leadconnectorhq.com/js/form_embed.js";
     script.type = "text/javascript";
     script.async = true;
     document.body.appendChild(script);
@@ -29,7 +29,7 @@ const BookCall = () => {
       </nav>
 
       <div className="pt-24 pb-16">
-        <section className="container mx-auto px-6 max-w-3xl">
+        <section className="container mx-auto px-6 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,21 +37,21 @@ const BookCall = () => {
           >
             <div className="text-center mb-8">
               <h1 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-                Book Your{" "}
-                <span className="text-gradient-gold">Free Strategy Call</span>
+                Schedule Your{" "}
+                <span className="text-gradient-gold">Strategy Call</span>
               </h1>
               <p className="text-muted-foreground text-base sm:text-lg max-w-lg mx-auto">
-                Answer a few quick questions so we can prepare for your call.
+                Choose a time that works best for you.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border bg-card overflow-hidden">
               <iframe
-                src="https://api.leadconnectorhq.com/widget/survey/osLiQSua3d7h5WtthTt4"
-                style={{ border: "none", width: "100%", minHeight: "600px" }}
+                src="https://api.leadconnectorhq.com/widget/booking/wtu17F85axGcNlcTUeA2"
+                style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
                 scrolling="no"
-                id="osLiQSua3d7h5WtthTt4"
-                title="Survey"
+                id="wtu17F85axGcNlcTUeA2_booking"
+                title="Book a Strategy Call"
               />
             </div>
           </motion.div>
@@ -61,4 +61,4 @@ const BookCall = () => {
   );
 };
 
-export default BookCall;
+export default Calendar;
