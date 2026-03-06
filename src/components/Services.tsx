@@ -36,7 +36,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="p-6 rounded-xl border border-border bg-card transition-all duration-300 hover:scale-105 hover:border-gold/20 hover:-translate-y-1 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
+              className="hover-lift p-6 rounded-xl border border-border bg-card hover:border-gold/20 hover:shadow-[0_8px_30px_-8px_hsl(222_30%_5%_/_0.6)]"
             >
               <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
                 <service.icon className="w-5 h-5 text-gold" />
