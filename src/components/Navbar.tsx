@@ -31,12 +31,21 @@ const Navbar = () => {
           <a href="#why-us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why Us</a>
           <a href="#results" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Results</a>
         </div>
-        <Button variant="hero" size="default" className="text-sm" asChild>
-          <Link to="/book">
-            Book A Free Call
-            <ArrowRight className="w-4 h-4 ml-1" />
-          </Link>
-        </Button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+          <Button variant="hero" size="default" className="text-sm" asChild>
+            <Link to="/book">
+              Book A Free Call
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </nav>
   );
