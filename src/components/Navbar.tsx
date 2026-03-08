@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
