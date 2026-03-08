@@ -40,7 +40,7 @@ const IntroAnimation = ({ onComplete }: { onComplete: () => void }) => {
           <motion.div
             className="absolute inset-0"
             style={{
-              background: "hsl(222 30% 10%)",
+              background: "hsl(var(--background))",
             }}
             initial={{ clipPath: "inset(0 0 0 0)" }}
             animate={{ clipPath: "inset(100% 0 0 0)" }}

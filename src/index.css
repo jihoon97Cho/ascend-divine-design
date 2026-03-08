@@ -56,6 +56,56 @@
     --sidebar-border: 222 20% 20%;
     --sidebar-ring: 43 52% 54%;
   }
+
+  .light {
+    --background: 40 30% 97%;
+    --foreground: 222 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 15%;
+
+    --primary: 43 52% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 222 20% 30%;
+
+    --muted: 40 15% 93%;
+    --muted-foreground: 222 10% 45%;
+
+    --accent: 43 52% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 43 52% 48%;
+
+    --gold: 43 52% 48%;
+    --gold-light: 43 60% 58%;
+    --gold-dark: 43 45% 36%;
+    --navy: 222 30% 15%;
+    --navy-light: 222 20% 25%;
+    --navy-lighter: 222 15% 35%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(43 60% 58%), hsl(43 52% 48%), hsl(43 45% 36%));
+    --shadow-gold: 0 0 40px -10px hsl(43 52% 48% / 0.25);
+    --shadow-card: 0 8px 32px -8px hsl(222 30% 50% / 0.08);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 30% 15%;
+    --sidebar-primary: 43 52% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 20% 92%;
+    --sidebar-accent-foreground: 222 30% 15%;
+    --sidebar-border: 40 15% 88%;
+    --sidebar-ring: 43 52% 48%;
+  }
 }
 
 @layer base {
@@ -78,11 +128,11 @@
 
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(43 60% 68%), hsl(43 52% 54%), hsl(43 45% 40%));
+    background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 20px hsl(43 52% 54% / 0.3));
+    filter: drop-shadow(0 0 20px hsl(var(--gold) / 0.3));
   }
 
   .bg-gradient-gold {
