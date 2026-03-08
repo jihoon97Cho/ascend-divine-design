@@ -7,6 +7,7 @@ import { useTheme } from "@/components/ThemeProvider";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
