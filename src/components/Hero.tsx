@@ -45,7 +45,7 @@ const Hero = () => {
             </p>
             
             <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              You only pay after we deliver results. Guaranteed lead generation system used by 100+ businesses.
+              We work on retainers and performance-based revenue sharing. We succeed when you succeed.
             </p>
 
             {/* Single CTA */}
