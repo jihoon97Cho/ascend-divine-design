@@ -2,10 +2,10 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 50, suffix: "+", label: "Clients Served" },
-  { value: 4.2, suffix: "M+", label: "Revenue Generated" },
-  { value: 97, suffix: "%", label: "Client Retention" },
-  { value: 3, suffix: "x", label: "Average ROI" },
+  { value: 100, suffix: "+", label: "Businesses Helped" },
+  { value: 8.5, suffix: "M+", label: "Lead Value Generated" },
+  { value: 95, suffix: "%", label: "Client Success Rate" },
+  { value: 90, suffix: " Days", label: "Guaranteed Results" },
 ];
 
 const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {

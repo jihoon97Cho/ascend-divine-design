@@ -15,16 +15,16 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Copy */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center lg:text-left"
           >
             {/* Trust badge */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/20 bg-gold/5 text-gold text-sm mb-6"
             >
               <div className="flex gap-0.5">
@@ -35,53 +35,72 @@ const Hero = () => {
               <span>Trusted by 100+ Businesses</span>
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.1] mb-6">
-              Get More Qualified Leads{" "}
-              <span className="text-gradient-gold">Without Wasting Money</span>{" "}
-              On Ads
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black leading-[1.1] mb-6">
+              We'll Help You Get{" "}
+              <span className="text-gradient-gold font-black">1,000+ Qualified Leads</span>{" "}
+              In The Next 90 Days
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              We help businesses get a steady flow of leads and customers using
-              proven paid advertising strategies — so you can stop guessing and
-              start growing.
+            <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
+              Even if you've never run ads before. No guessing. No wasted money.
+            </p>
+            
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              You only pay after we deliver results. Guaranteed lead generation system used by 100+ businesses.
             </p>
 
             {/* Single CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg px-10 py-7 rounded-xl" asChild>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start"
+            >
+              <Button variant="hero" size="lg" className="text-xl font-bold px-12 py-8 rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-3xl" asChild>
                 <Link to="/book">
-                  Book A Free Strategy Call
-                  <ArrowRight className="w-5 h-5 ml-1" />
+                  Get My Lead Generation System
+                  <ArrowRight className="w-6 h-6 ml-2" />
                 </Link>
               </Button>
-            </div>
+            </motion.div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-gold" />
+            <div className="flex flex-wrap items-center gap-8 text-sm font-semibold justify-center lg:justify-start">
+              <div className="flex items-center gap-2 text-foreground">
+                <Users className="w-5 h-5 text-gold" />
+                <span>100+ Businesses Helped</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <TrendingUp className="w-5 h-5 text-gold" />
                 <span>$8.5M+ Lead Value Generated</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <BarChart3 className="w-5 h-5 text-gold" />
+                <span>90-Day Results Guaranteed</span>
               </div>
             </div>
           </motion.div>
 
           {/* Right: Analytics visual */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            initial={{ opacity: 0, x: 50, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="hidden lg:block"
           >
             <div className="relative">
               {/* Main dashboard card */}
-              <div className="rounded-2xl border border-border bg-card p-6 shadow-lg">
+              <motion.div 
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="rounded-2xl border border-border bg-card p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+              >
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <p className="text-sm text-muted-foreground">Total Leads Generated</p>
                     <p className="text-3xl font-display font-bold text-gradient-gold">2,847</p>
                   </div>
-                  <div className="flex items-center gap-1 text-sm text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full">
+                  <div className="flex items-center gap-1 text-sm text-gold bg-gold/10 px-3 py-1 rounded-full">
                     <TrendingUp className="w-4 h-4" />
                     <span>+127%</span>
                   </div>
@@ -103,7 +122,7 @@ const Hero = () => {
                   <span>Jun</span>
                   <span>Dec</span>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Floating stat cards */}
               <motion.div
