@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import BookCall from "./pages/BookCall";
 import Calendar from "./pages/Calendar";
 import ThankYou from "./pages/ThankYou";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
