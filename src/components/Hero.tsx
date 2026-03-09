@@ -51,10 +51,10 @@ const Hero = () => {
 
             {/* Single CTA */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg px-10 py-7 rounded-xl" asChild>
+              <Button variant="hero" size="lg" className="text-xl font-bold px-12 py-8 rounded-xl shadow-2xl" asChild>
                 <Link to="/book">
-                  Book A Free Strategy Call
-                  <ArrowRight className="w-5 h-5 ml-1" />
+                  Get My Lead Generation System
+                  <ArrowRight className="w-6 h-6 ml-2" />
                 </Link>
               </Button>
             </div>
