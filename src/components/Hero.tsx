@@ -60,10 +60,18 @@ const Hero = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-gold" />
+            <div className="flex flex-wrap items-center gap-8 text-sm font-semibold justify-center lg:justify-start">
+              <div className="flex items-center gap-2 text-foreground">
+                <Users className="w-5 h-5 text-gold" />
+                <span>100+ Businesses Helped</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <TrendingUp className="w-5 h-5 text-gold" />
                 <span>$8.5M+ Lead Value Generated</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <BarChart3 className="w-5 h-5 text-gold" />
+                <span>90-Day Results Guaranteed</span>
               </div>
             </div>
           </motion.div>
