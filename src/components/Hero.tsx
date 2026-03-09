@@ -122,7 +122,7 @@ const Hero = () => {
                   <span>Jun</span>
                   <span>Dec</span>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Floating stat cards */}
               <motion.div
