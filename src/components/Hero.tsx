@@ -44,9 +44,6 @@ const Hero = () => {
               Even if you've never run ads before. No guessing. No wasted money.
             </p>
             
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              We work on retainers and performance-based revenue sharing. We succeed when you succeed.
-            </p>
 
             {/* Single CTA */}
             <motion.div 
