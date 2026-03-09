@@ -36,9 +36,8 @@ const Hero = () => {
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black leading-[1.1] mb-6">
-              We'll Help You Get{" "}
-              <span className="text-gradient-gold font-black">1,000+ Qualified Leads</span>{" "}
-              In The Next 90 Days
+              We Help Businesses Turn Paid Ads Into{" "}
+              <span className="text-gradient-gold font-black">Qualified Booked Appointments</span>
             </h1>
 
             <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
