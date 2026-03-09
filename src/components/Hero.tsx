@@ -35,16 +35,18 @@ const Hero = () => {
               <span>Trusted by 100+ Businesses</span>
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.1] mb-6">
-              Get More Qualified Leads{" "}
-              <span className="text-gradient-gold">Without Wasting Money</span>{" "}
-              On Ads
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black leading-[1.1] mb-6">
+              We'll Help You Get{" "}
+              <span className="text-gradient-gold font-black">1,000+ Qualified Leads</span>{" "}
+              In The Next 90 Days
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              We help businesses get a steady flow of leads and customers using
-              proven paid advertising strategies — so you can stop guessing and
-              start growing.
+            <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
+              Even if you've never run ads before. No guessing. No wasted money.
+            </p>
+            
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              You only pay after we deliver results. Guaranteed lead generation system used by 100+ businesses.
             </p>
 
             {/* Single CTA */}
