@@ -100,7 +100,7 @@ const Hero = () => {
                     <p className="text-sm text-muted-foreground">Total Leads Generated</p>
                     <p className="text-3xl font-display font-bold text-gradient-gold">2,847</p>
                   </div>
-                  <div className="flex items-center gap-1 text-sm text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full">
+                  <div className="flex items-center gap-1 text-sm text-gold bg-gold/10 px-3 py-1 rounded-full">
                     <TrendingUp className="w-4 h-4" />
                     <span>+127%</span>
                   </div>
