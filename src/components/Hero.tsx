@@ -90,7 +90,11 @@ const Hero = () => {
           >
             <div className="relative">
               {/* Main dashboard card */}
-              <div className="rounded-2xl border border-border bg-card p-6 shadow-lg">
+              <motion.div 
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="rounded-2xl border border-border bg-card p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+              >
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <p className="text-sm text-muted-foreground">Total Leads Generated</p>
