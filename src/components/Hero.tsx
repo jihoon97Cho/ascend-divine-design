@@ -50,14 +50,19 @@ const Hero = () => {
             </p>
 
             {/* Single CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-xl font-bold px-12 py-8 rounded-xl shadow-2xl" asChild>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start"
+            >
+              <Button variant="hero" size="lg" className="text-xl font-bold px-12 py-8 rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-3xl" asChild>
                 <Link to="/book">
                   Get My Lead Generation System
                   <ArrowRight className="w-6 h-6 ml-2" />
                 </Link>
               </Button>
-            </div>
+            </motion.div>
 
             {/* Trust indicators */}
             <div className="flex flex-wrap items-center gap-8 text-sm font-semibold justify-center lg:justify-start">
