@@ -52,7 +52,7 @@ import {
 
 const heroStats = [
   { value: "Varies", label: "Industry Avg CPL", sub: "By niche · benchmark below" },
-  { value: "$25-50", label: "Target CPL", sub: "After Andromeda-era rebuild" },
+  { value: "$60-150", label: "Target CPL", sub: "Solid range · varies by niche" },
   { value: "391%", label: "Speed-to-Lead Lift", sub: "Contact in <5 min vs 30 min" },
   { value: "60/30/10", label: "Creative Budget Split", sub: "Winners / Tests / Wild swings" },
   { value: "10-16", label: "Ads Per Month", sub: "Minimum to outpace fatigue" },
@@ -60,14 +60,14 @@ const heroStats = [
 ];
 
 const cplBenchmarks = [
-  { niche: "Concrete", industry: 165, target: 45 },
-  { niche: "Roofing", industry: 220, target: 65 },
-  { niche: "HVAC", industry: 145, target: 38 },
-  { niche: "Pool Build", industry: 310, target: 95 },
-  { niche: "IV Drip", industry: 85, target: 22 },
-  { niche: "Med Spa", industry: 95, target: 28 },
-  { niche: "Foundation", industry: 240, target: 70 },
-  { niche: "Solar", industry: 195, target: 55 },
+  { niche: "Concrete", industry: 165, target: 100 },
+  { niche: "Roofing", industry: 220, target: 135 },
+  { niche: "HVAC", industry: 145, target: 85 },
+  { niche: "Pool Build", industry: 310, target: 185 },
+  { niche: "IV Drip", industry: 85, target: 55 },
+  { niche: "Med Spa", industry: 95, target: 60 },
+  { niche: "Foundation", industry: 240, target: 140 },
+  { niche: "Solar", industry: 195, target: 115 },
 ];
 
 const fatigueCurve = [
@@ -92,7 +92,7 @@ const funnelSteps = [
 ];
 
 const killScale = [
-  { metric: "CPL", green: "Below target", yellow: "1-2× target", kill: "2× target ($50+)" },
+  { metric: "CPL", green: "Below target", yellow: "1-2× target", kill: "2× target (e.g. $200+ in concrete)" },
   { metric: "Hook Rate (3s view)", green: ">25%", yellow: "15-25%", kill: "<15%" },
   { metric: "CTR (Link)", green: ">1.5%", yellow: "0.8-1.5%", kill: "<0.8%" },
   { metric: "Frequency", green: "<2.5", yellow: "2.5-4", kill: ">4 (refresh creative)" },
@@ -172,12 +172,12 @@ const caseStudy = {
   starting: "$185 CPL on $5/day boosted posts (his existing setup)",
   rebuilt: "1 campaign, 2 ad sets, 6 creatives, $50/day each",
   weeks: [
-    { week: "Week 1", spend: "$700", leads: 14, cpl: "$50", note: "Learning phase. 1 hook breaking out (UGC time-lapse)." },
-    { week: "Week 2", spend: "$700", leads: 22, cpl: "$32", note: "Killed 2 losers. Doubled spend on the time-lapse hook." },
-    { week: "Week 3", spend: "$800", leads: 31, cpl: "$26", note: "Added 4 new creatives in the winning concept lane." },
-    { week: "Week 4", spend: "$800", leads: 38, cpl: "$21", note: "CBO unlocked. Frequency ticked to 2.8 — refresh queued for Wk 5." },
+    { week: "Week 1", spend: "$700", leads: 5, cpl: "$140", note: "Learning phase. 1 hook breaking out (UGC time-lapse)." },
+    { week: "Week 2", spend: "$700", leads: 6, cpl: "$117", note: "Killed 2 losers. Doubled spend on the time-lapse hook." },
+    { week: "Week 3", spend: "$800", leads: 7, cpl: "$114", note: "Added 4 new creatives in the winning concept lane." },
+    { week: "Week 4", spend: "$800", leads: 8, cpl: "$100", note: "CBO unlocked. Frequency ticked to 2.8 — refresh queued for Wk 5." },
   ],
-  outcome: "From $185 CPL → $21 CPL in 4 weeks. 105 leads at avg $28.57. 22 booked estimates. 8 closed jobs averaging $11k.",
+  outcome: "From $185 CPL → $100 CPL in 4 weeks. 26 leads at avg $115. ~8 booked estimates, ~3 closed jobs averaging $11k. $33k revenue on $3k spend — real-world results, not a unicorn campaign.",
 };
 
 const heldBack = [
@@ -381,8 +381,8 @@ const MetaAdBlueprint = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-black leading-[1.05] mb-6">
-              The Meta Ad Blueprint We Use to Take Service Businesses From{" "}
-              <span className="text-gradient-gold">$165 CPLs to $25</span> in 30 Days.
+              The Meta Ad Blueprint We Use to Cut Service-Business CPLs by{" "}
+              <span className="text-gradient-gold">35–50%</span> in 30 Days.
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
