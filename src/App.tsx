@@ -9,6 +9,7 @@ import BookCall from "./pages/BookCall";
 import Calendar from "./pages/Calendar";
 import ThankYou from "./pages/ThankYou";
 import Admin from "./pages/Admin";
+import MetaAdBlueprint from "./pages/MetaAdBlueprint";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/meta-ad-blueprint" element={<MetaAdBlueprint />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
