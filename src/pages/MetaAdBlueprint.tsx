@@ -51,7 +51,7 @@ import {
 // -------- Data --------
 
 const heroStats = [
-  { value: "$165", label: "Industry Avg CPL", sub: "Florida home services, 2025" },
+  { value: "Varies", label: "Industry Avg CPL", sub: "By niche · benchmark below" },
   { value: "$25-50", label: "Target CPL", sub: "After Andromeda-era rebuild" },
   { value: "391%", label: "Speed-to-Lead Lift", sub: "Contact in <5 min vs 30 min" },
   { value: "60/30/10", label: "Creative Budget Split", sub: "Winners / Tests / Wild swings" },
@@ -132,11 +132,11 @@ const mistakes = [
   {
     title: "$5/day budgets",
     happens: "You never exit learning phase. 50 conversions in 7 days is the bar.",
-    instead: "Minimum $30-50/day per ad set in home services. Concentrate spend.",
+    instead: "Minimum $30-50/day per ad set in competitive niches. Concentrate spend.",
   },
   {
     title: "25-mile radius around your shop",
-    happens: "Florida sprawl punishes this. You're missing 60% of intent.",
+    happens: "Wide geos punish this. You're missing 60% of high-intent reach.",
     instead: "City-level targeting (Tampa, Orlando, Jax) or 50-mile radius from job site clusters.",
   },
   {
@@ -209,7 +209,7 @@ const faqs = [
   },
   {
     question: "How big does my budget need to be?",
-    answer: "$1,500/mo ad spend minimum to exit learning phase reliably in home services. $3,000/mo is where things actually compound. Below $1k you're paying for noise.",
+    answer: "$1,500/mo ad spend minimum to exit learning phase reliably in most niches. $3,000/mo is where things actually compound. Below $1k you're paying for noise.",
   },
   {
     question: "How fast will I see results?",
@@ -265,7 +265,7 @@ const pillars = [
     body: [
       "The old way: 30 ad sets, narrow interest stacks, manual bid caps, dayparting. The algo learned nothing because every signal was fragmented.",
       "The Andromeda-era way: 1 campaign, 2-3 ad sets max, broad targeting (or Advantage+ Audience), 4-6 creatives per ad set. Let the model do what it's built to do — find buyers across signals you can't see.",
-      "Net effect on real Florida home-service accounts: 40-65% drop in CPL inside 30 days, every time we rebuild this layer.",
+      "Net effect on real client accounts: 40-65% drop in CPL inside 30 days, every time we rebuild this layer.",
     ],
     visual: "structure",
   },
@@ -304,7 +304,7 @@ const pillars = [
       "Pixel: Installed correctly, fires on the 6 events that matter (PageView, Lead, ViewContent, InitiateCheckout, Schedule, Purchase).",
       "CAPI: Server-side. Either GHL native, Zapier, or direct CAPI gateway. Aim for an EMQ (Event Match Quality) score of 8.0+ on Lead.",
       "AEM 8-event config: Domain verified in Business Manager. 8 events ranked by value. Your money event sits at #1. Locked.",
-      "CallRail: For phone leads. Tracks the source down to the keyword/ad. Florida is two-party consent — recording disclosure is required and pre-built into CallRail's flow.",
+      "CallRail: For phone leads. Tracks the source down to the keyword/ad. In two-party-consent states (FL, CA, PA, etc.), recording disclosure is required and pre-built into CallRail's flow.",
       "Blended attribution: Triangulate Ads Manager + GA4 + CallRail + your CRM. Last-click is fiction post-iOS. Stop trusting it alone.",
     ],
     visual: "tracking",
@@ -361,7 +361,7 @@ const MetaAdBlueprint = () => {
   return (
     <div className="min-h-screen bg-background">
       <MouseGlow />
-      <Navbar />
+      <Navbar minimal />
 
       {/* HERO */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -386,9 +386,9 @@ const MetaAdBlueprint = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-              Built for Florida home-service operators running Meta ads with bad ROI — or thinking about
-              starting and refusing to set fire to $3,000 figuring it out. Read the whole thing. We hold
-              nothing back except the templates we deploy in client accounts.
+              Built for any business owner running Meta ads with bad ROI — or thinking about starting and
+              refusing to set fire to $3,000 figuring it out. Read the whole thing. We hold nothing back
+              except the templates we deploy in client accounts.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -412,7 +412,7 @@ const MetaAdBlueprint = () => {
             </div>
 
             <div className="text-sm text-muted-foreground">
-              Built from real campaigns across concrete, roofing, HVAC, pool, IV-drip, and med-spa accounts in Florida.
+              Built from real campaigns across concrete, roofing, HVAC, pool, IV-drip, med-spa, and other service-business accounts.
             </div>
           </motion.div>
         </div>
@@ -494,13 +494,14 @@ const MetaAdBlueprint = () => {
         <div className="container mx-auto px-6">
           <Reveal>
             <div className="text-center mb-14 max-w-3xl mx-auto">
-              <SectionLabel>Florida Benchmarks</SectionLabel>
+              <SectionLabel>CPL Benchmarks (Vary By Niche)</SectionLabel>
               <SectionHeading>
                 What you should be paying per lead — by niche.
               </SectionHeading>
               <SectionLead>
-                These are the numbers we hold accounts to. Industry average is what most agencies normalize.
-                Target is what's possible when the seven pillars are running.
+                CPL varies by niche, market, season, and offer — these are blended ranges from real
+                accounts. Industry average is what most agencies normalize. Target is what's possible
+                when the seven pillars are running. Treat them as goalposts, not guarantees.
               </SectionLead>
             </div>
           </Reveal>
@@ -601,36 +602,39 @@ const MetaAdBlueprint = () => {
               <SectionLabel>The Funnel — Real Math</SectionLabel>
               <SectionHeading>What 100,000 impressions actually turns into.</SectionHeading>
               <SectionLead>
-                Blended numbers from healthy Florida home-service accounts running the full blueprint.
-                Notice where the leak is — and why each step is non-negotiable.
+                Blended numbers from healthy accounts running the full blueprint. Notice where the leak is —
+                and why each step is non-negotiable.
               </SectionLead>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="max-w-3xl mx-auto space-y-3">
+            <div className="max-w-3xl mx-auto space-y-5">
               {funnelSteps.map((step, i) => {
-                const widthPct = Math.max(18, (step.value / funnelSteps[0].value) * 100);
+                // Index-based taper so each step is visibly narrower (raw values clamp to ~0).
+                // Step 1 = 100%, last step ~ 38%. Min width keeps content legible on mobile.
+                const taper = 100 - i * ((100 - 38) / (funnelSteps.length - 1));
+                const widthPct = Math.max(38, taper);
                 return (
                   <div key={step.label} className="relative">
                     <div
-                      className="rounded-xl border border-gold/20 bg-gradient-to-r from-gold/10 to-gold/5 p-5 shadow-md mx-auto transition-all hover:scale-[1.01]"
+                      className="rounded-xl border border-gold/20 bg-gradient-to-r from-gold/15 to-gold/5 p-5 shadow-md mx-auto transition-all hover:scale-[1.01]"
                       style={{ width: `${widthPct}%` }}
                     >
                       <div className="flex items-center justify-between gap-4">
                         <div>
-                          <div className="text-sm uppercase tracking-wider text-gold font-semibold">
+                          <div className="text-xs sm:text-sm uppercase tracking-wider text-gold font-semibold">
                             Step {i + 1}
                           </div>
-                          <div className="font-display font-bold text-foreground text-base sm:text-lg">
+                          <div className="font-display font-bold text-foreground text-sm sm:text-lg leading-tight">
                             {step.label}
                           </div>
                         </div>
-                        <div className="text-right">
-                          <div className="text-xl sm:text-2xl font-display font-black text-foreground">
+                        <div className="text-right shrink-0">
+                          <div className="text-lg sm:text-2xl font-display font-black text-foreground leading-none">
                             {step.value.toLocaleString()}
                           </div>
-                          <div className="text-xs text-muted-foreground">{step.pct}</div>
+                          <div className="text-[10px] sm:text-xs text-muted-foreground mt-1">{step.pct}</div>
                         </div>
                       </div>
                     </div>
@@ -930,7 +934,7 @@ const MetaAdBlueprint = () => {
                 </Link>
               </Button>
               <div className="mt-6 text-sm text-muted-foreground">
-                Florida home-service operators only. Spend $1,500/mo+ on Meta or seriously planning to.
+                Operators spending $1,500/mo+ on Meta — or seriously planning to.
               </div>
             </div>
           </Reveal>
