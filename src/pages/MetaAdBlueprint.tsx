@@ -32,7 +32,6 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
-import FridayDashboard from "@/components/blueprint/FridayDashboard";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -487,35 +486,6 @@ const MetaAdBlueprint = () => {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* FRIDAY DASHBOARD — sketchy whiteboard preview */}
-      <section id="friday-dashboard" className="py-24">
-        <div className="container mx-auto px-6">
-          <Reveal>
-            <div className="text-center mb-14 max-w-3xl mx-auto">
-              <SectionLabel>Inside The Account · Friday Review</SectionLabel>
-              <SectionHeading>What Your Account Looks Like When We Run It.</SectionHeading>
-              <SectionLead>
-                Every Friday we review every account against this dashboard. Kill what's dead, scale
-                what's working, queue creative for next week. This is the surface we'd build for yours.
-              </SectionLead>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <FridayDashboard />
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <p
-              className="text-center mt-8 text-base sm:text-lg italic text-muted-foreground max-w-2xl mx-auto"
-              style={{ fontFamily: `'Kalam', 'Caveat', cursive` }}
-            >
-              Your account would have its own version of this within 14 days.
-            </p>
-          </Reveal>
         </div>
       </section>
 
